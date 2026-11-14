@@ -1,0 +1,1126 @@
+/* ===============================
+   GENERAL SETTINGS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-image: url('moonbackground.jpg');
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+
+
+    color: #f4f5f7;
+}
+
+
+/* ===============================
+   MAIN APPLICATION
+================================ */
+
+.app {
+    width: 90%;
+    max-width: 12000px;
+
+    margin: 30px auto;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;
+
+    backdrop-filter: blur(10px);
+
+
+    padding: 20px 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgb(231, 215, 231);
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 35px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.logo p {
+    color: #8c9ea7;
+
+    margin-top: 4px;
+
+    font-size: 13px;
+}
+
+
+/* Profile */
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #f8f2f2;
+
+    font-size: 20px;
+}
+
+.profile p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-top: 3px;
+}
+
+
+/* ===============================
+   WELCOME SECTION
+================================ */
+
+.welcome {
+    margin-top: 50px;
+
+    padding: 30px;
+
+     background: transparent;
+
+    backdrop-filter: blur(10px);
+
+    color: rgb(241, 239, 239);
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(247, 244, 247, 0.973);
+}
+
+.welcome h2 {
+    font-size: 28px;
+}
+
+.welcome p {
+    margin-top: 50px;
+
+    opacity: 0.9;
+}
+
+
+/* Start button */
+
+.start-button {
+    border: none;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+
+    background-color: rgb(10, 206, 245);
+
+    color: #121212;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.475);
+}
+
+.start-button:hover {
+    background: #8c9ea7;
+    color: #121212;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.936);
+}
+
+
+/* ===============================
+   FEATURE CARDS
+================================ */
+
+.features {
+    margin-top: 100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.feature-card {
+    background: transparent;
+
+    backdrop-filter: blur(10px);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    filter: blur(0.1px);
+
+    box-shadow: 0 4px 15px rgb(94, 93, 93);
+
+    transition: transform 0.2s;
+
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+     box-shadow: 0 4px 15px rgb(255, 254, 254);
+}
+
+
+.feature-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #928c8c;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    min-height: 65px;
+}
+
+/* Feature button */
+
+.feature-card button {
+    margin-top: 15px;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #8c9ea7;
+
+    color: rgb(11, 11, 11);
+
+    cursor: pointer;
+}
+
+.feature-card button:hover {
+    background-color: #b9f8ff;
+    box-shadow: 0 4px 15px rgb(14, 13, 13);
+}
+
+<!--pomodoro >
+/* ========================================
+   POMODORO TIMER
+======================================== *//* ========================================
+   TIMER SETTINGS
+======================================== */
+
+.timer-settings {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin: 15px 0;
+}
+
+.timer-settings label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.timer-settings input {
+    width: 100%;
+
+    padding: 8px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+.timer-settings input:focus {
+    border-color: #8c9ea7;
+}
+
+
+/* ========================================
+   TIMER BUTTON CONTAINER
+======================================== */
+
+.timer-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-bottom: 12px;
+}
+
+ #pomodoroMode {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+
+/* Countdown */
+ #pomodoroTimer {
+    text-align: center;
+
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    margin: 12px 0 16px;
+
+    padding: 12px 8px;
+
+    border-radius: 10px;
+
+    background-attachment: blur(10px);
+
+    color: #fdfbfb;
+
+    border: 2px solid #fffdfd;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    #pomodoroTimer {
+        font-size: 18px;
+    }
+
+    #startButton,
+    #pauseButton,
+    #resetButton {
+        padding: 9px 12px;
+
+        font-size: 13px;
+    }
+
+}
+/* ========================================
+   FOCUS MODE AUDIO
+======================================== */
+
+.focus-audio {
+    margin-top: 15px;
+}
+
+.focus-audio label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+#audioSelect {
+    width: 100%;
+
+    padding: 9px;
+
+    border: 1px solid #060606;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    background-image: linear-gradient(to right, #cdb64d, #da7676);
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+#audioSelect:focus {
+    border-color: #1b1b1b;
+}
+
+#audioButton {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 9px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #525f72;
+
+    color:#8c9ea7;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#audioButton:hover {
+    background-image: linear-gradient(to right, #4ade80, #22d3ee);
+}
+/* ========================================
+   ai interface
+======================================== */
+/* ========================================
+   AI DOUBT SOLVER
+======================================== */
+
+.ai-card {
+    overflow: hidden;
+}
+
+.chat-container {
+    margin-top: 25px;
+}
+
+
+/* Chat messages */
+
+.chat-messages {
+    height: 200px;
+
+    overflow-y: auto;
+
+    padding: 10px;
+
+    background-image: url('download.png');
+
+    background-size: cover;
+
+    background-position: center;
+
+    border: 1px solid rgb(3, 3, 3);
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+}
+
+
+/* AI message */
+
+.ai-message {
+    background-attachment: transparent;
+    backdrop-filter: blur(10px);
+
+    padding: 9px 12px;
+
+    border-radius: 10px;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* User message */
+
+.user-message {
+    background-attachment: transparent;
+    backdrop-filter: blur(10px);
+
+    padding: 9px 12px;
+
+    border-radius: 10px;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    text-align: right;
+}
+
+
+/* Input area */
+
+.chat-input-area {
+    display: flex;
+    gap: 16px;
+}
+
+
+#userQuestion {
+    flex: 1;
+
+    min-width: 0;
+
+    background: rgb(249, 248, 249);
+    
+    padding: 9px;
+
+    border: 3px solid #f9f7f7;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+
+#userQuestion:focus {
+    border-color: #fefcfc;
+}
+
+
+#askButton {
+    padding: 9px 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #8c9ea7;
+
+    color: rgb(2, 2, 2);
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+#askButton:hover {
+    background-color: #b9f8ff;
+}
+/* ========================================
+   POSTURE CORRECTION
+======================================== */
+
+.camera-container {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: #0f172a;
+
+     box-shadow: 0 4px 15px rgba(153, 147, 147, 0.658);
+}
+
+
+#camera {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    transform: scaleX(-1);
+}
+
+
+#poseCanvas {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+}
+
+
+.posture-status {
+    margin-top: 10px;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    background: #000000;
+}
+
+
+#cameraButton {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #8c9ea7;
+
+    color: rgb(0, 0, 0);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+#cameraButton:hover {
+    background: #b9f8ff;
+}
+
+/* ===============================
+   PROGRESS SECTION
+================================ */
+
+.progress-section {
+    margin-top: 50px;
+}
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+     background: transparent;
+     backdrop-filter: blur(10px);
+
+     border-radius: 7px;
+}
+
+.section-title h2 {
+    font-size: 22px;
+}
+
+.section-title p {
+    margin-top: 5px;
+
+    color: #faf9f9;
+
+    font-size: 14px;
+}
+
+
+/* ===============================
+   STAT CARDS
+================================ */
+
+.stats {
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.stat-card {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding: 35px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 4px 15px rgba(204, 35, 255, 0.995);
+
+    transition: transform 0.5s;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+
+     box-shadow: 0 4px 15px rgb(234, 3, 255);
+}
+.stat-icon {
+    font-size: 30px;
+}
+
+.stat-card p {
+    color: #fefefe;
+
+    font-size: 13px;
+}
+
+.stat-card h3 {
+    margin-top: 5px;
+
+    font-size: 22px;
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+
+    margin-top: 300px;
+
+    padding: 200px;
+
+    color: #f6f7f9;
+
+    font-size: 13px;
+}
+
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        align-items: flex-start;
+    }
+
+    .welcome {
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===============================
+   MORE FEATURES
+================================ */
+
+
+
+.mfeature-card {
+
+    margin-top: 50px;
+
+    background: transparent;
+
+    backdrop-filter: blur(10px);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    filter: blur(0.1px);
+
+    box-shadow: 0 4px 15px rgb(94, 93, 93);
+
+    transition: transform 0.2s;
+
+}
+
+.mfeature-card:hover {
+    transform: translateY(-5px);
+
+     box-shadow: 0 4px 15px rgb(255, 254, 254);
+}
+
+
+.mfeature-icon {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+.mfeature-card h3 {
+    margin-bottom: 20px;
+}
+
+.mfeature-card p {
+    color: #928c8c;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    min-height: 65px;
+}
+
+/* Feature button */
+
+.mfeature-card button {
+    margin-top: 15px;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #97d3f1;
+
+    color: rgb(11, 11, 11);
+
+    cursor: pointer;
+}
+
+.mfeature-card button:hover {
+    background-color: #b4eff8;
+    box-shadow: 0 4px 15px rgb(255, 255, 255);
+}
+
+
+
+/* Main Calendar */
+
+
+
+
+.calendar-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 10px auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+    color: #f7fafb;
+    background-attachment: transparent;
+
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.658);
+}
+
+.calendar-container * {
+    box-sizing: border-box;
+}
+
+/* Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+.calendar-header button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+
+    background-image: linear-gradient(to right, #94daf8, #c5ebeb);
+    color: #222;
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.calendar-header button:hover {
+    background-image: linear-gradient(to right, #9c9e9c, #eaecec);
+}
+
+/* Weekdays and Dates */
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 5px;
+}
+
+.calendar-weekdays {
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #f8f5f5;
+}
+
+.calendar-weekdays div {
+    padding: 8px 0;
+}
+
+/* Individual Dates */
+.calendar-day {
+    min-width: 0;
+    min-height: 58px;
+    padding: 8px 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    border: 2px solid transparent;
+    border-radius: 7px;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+/* Today's Date */
+.calendar-day.today {
+    border-color: #6c6c6d;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #999797, #eaeaea);
+}
+
+/* Selected Date */
+.calendar-day.selected {
+    background: #999797;
+    color: #fff;
+}
+
+.calendar-day.selected:hover {
+    background: #e6e0e0;
+    color: #716c6c;
+}
+
+/* Empty Calendar Cells */
+.calendar-day.empty {
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Dates with Events */
+.calendar-day.has-event::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background: #01ff5e;
+}
+
+.calendar-day.selected.has-event::after {
+    background: #01ff5e;
+}
+
+/* Events Section */
+.events-section {
+    margin-top: 22px;
+    padding-top: 15px;
+    background-attachment: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.events-section h3 {
+    margin: 0 0 12px;
+    font-size: 17px;
+}
+
+/* Event List */
+#event-list {
+    padding-left: 5px;
+}
+
+#event-list li {
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+}
+
+#event-list button {
+    margin-left: 10px;
+    padding: 5px 8px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-image: linear-gradient(to right,#f87171, #fca5a5);
+    color: #510b0b;
+
+    cursor: pointer;
+}
+
+#event-list button:hover {
+    background-image: linear-gradient(to right,#602323, #f60606);
+}
+
+/* Add Event Form */
+#event-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+#event-input {
+    flex: 1 1 180px;
+    min-width: 0;
+    padding: 11px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    font-size: 14px;
+}
+
+#event-form button {
+    padding: 11px 15px;
+
+    border: none;
+    border-radius: 7px;
+
+    background:  #8c9ea7;
+    color: #171616;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#event-form button:hover {
+    background: #b9f8ff;
+}
+
+/* Status Message */
+#calendar-status {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Keyboard Focus */
+.calendar-container button:focus-visible,
+.calendar-container input:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 450px) {
+    .calendar-container {
+        padding: 12px;
+    }
+
+    .calendar-header h2 {
+        font-size: 18px;
+    }
+
+    .calendar-day {
+        min-height: 45px;
+        font-size: 13px;
+    }
+
+    .calendar-header button {
+        padding: 8px 11px;
+    }
+}
+
