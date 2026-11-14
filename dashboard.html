@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+
+    <title>My Smart Desk</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main application container -->
+    <div class="app">
+
+        <!-- ================= HEADER ================= -->
+        <header class="header">
+
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <div>
+                    <h1>My Smart Desk</h1>
+                    <p>AI Powered Productivity Assistant</p>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div class="profile-icon">👤</div>
+
+                <div>
+                    <strong>Hello, User</strong>
+                    <p>Ready to focus?</p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- ================= WELCOME SECTION ================= -->
+        <section class="welcome">
+
+            <div>
+                <h2>Good Evening! 👋</h2>
+
+                <p>
+                    Stay focused, learn smarter and maintain a healthy posture.
+                </p>
+            </div>
+
+            <button class="start-button">
+                Start Focus Session
+            </button>
+
+        </section>
+
+
+        <!-- ================= FEATURE CARDS ================= -->
+        <section class="features">
+
+            <!-- Pomodoro -->
+
+<div class="feature-card">
+
+    <div class="feature-icon">⏱️</div>
+
+    <h3>Pomodoro</h3>
+
+    <p>This technique helps you focus by breaking your work into small intervals.</p>
+
+    <div id="pomodoroMode">Focus Time 🎯</div>
+
+    <div id="pomodoroTimer">25:00</div>
+
+    <p>
+        Focus using a customizable study and break timer.
+    </p>
+
+    <!-- Custom Settings -->
+
+    <div class="timer-settings">
+
+        <label for="focusInput">
+            Focus Duration
+        </label>
+
+        <input
+            type="number"
+            id="focusInput"
+            value="25"
+            min="1"
+        >
+
+        <label for="breakInput">
+            Break Duration
+        </label>
+
+        <input
+            type="number"
+            id="breakInput"
+            value="5"
+            min="1"
+        >
+
+    </div>
+
+
+    <!-- Timer Buttons -->
+
+    <div class="timer-buttons">
+
+        <button id="startButton">
+            Start
+        </button>
+
+        <button id="pauseButton">
+            Pause
+        </button>
+
+        <button id="resetButton">
+            Reset
+        </button>
+
+    </div>
+
+
+    <p>
+        Completed Pomodoros:
+        <span id="completedCount">0</span>
+    </p>
+
+</div>
+            <!-- AI Chat -->
+<div class="feature-card ai-card">
+
+    <div class="feature-icon">🤖</div>
+
+    <h3>AI Doubt Solver</h3>
+
+    <p>
+        Get instant explanations for your study doubts
+        using AI.
+    </p>
+
+    <div class="chat-container">
+
+        <div id="chatMessages" class="chat-messages">
+
+            <div class="ai-message">
+                👋 Hi! Ask me your study doubt.
+            </div>
+
+        </div>
+
+
+        <div class="chat-input-area">
+
+            <input
+                type="text"
+                id="userQuestion"
+                placeholder="stuck on a concept? Try asking me..."
+            >
+
+            </div>
+
+            <button id="askButton">
+                Ask AI
+            </button>
+
+    </div>
+
+</div>
+
+            <!-- Posture -->
+<div class="feature-card posture-card">
+
+    <div class="feature-icon">🧍</div>
+
+    <h3>Posture Correction</h3>
+
+    <p>
+        Use your camera to monitor your sitting posture.
+    </p>
+
+    <div class="camera-container">
+
+        <video
+            id="camera"
+            autoplay
+            playsinline>
+        </video>
+
+        <canvas id="poseCanvas"></canvas>
+
+    </div>
+
+    <div id="postureStatus" class="posture-status">
+        Camera not started
+    </div>
+
+    <button id="cameraButton">
+        Start Camera
+    </button>
+
+</div>
+
+            <!-- Focus Mode -->
+<div class="mfeature-card">
+
+    <div class="mfeature-icon">🎯</div>
+
+    <h3>Focus Mode</h3>
+
+    <p>
+        Create a distraction-free environment with
+        relaxing focus sounds.
+    </p>
+
+
+    <!-- Focus Sound -->
+
+    <div class="focus-audio">
+
+        <label for="audioSelect">
+            Focus Sound
+        </label>
+
+        <select id="audioSelect">
+
+            <option value="none">
+                🔇 No Sound
+            </option>
+
+            <option value="rain">
+                🌧️ Rain
+            </option>
+
+            <option value="forest">
+                🌲 Forest
+            </option>
+
+            <option value="lofi">
+                🎵 Lo-fi
+            </option>
+
+            <option value="Theeta">
+                🎶 Theeta
+            </option>
+
+        </select>
+
+
+        <button id="audioButton">
+            ▶ Play Sound
+        </button>
+
+    </div>
+
+</div>
+        </section>
+        <!-- ================= MORE FEATURES ================= -->
+                <section class="mfeatures">
+
+<div class="mfeature-card">
+
+    <div class="mfeature-icon" align="center">📅</div>
+
+    <h2 align="center">Calendar</h2>
+
+
+
+<!-- WORKING CALENDAR -->
+    <p align="center">Keep track of your events and tasks with this interactive calendar.</p>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Calendar Container -->
+    <div class="calendar-container" role="region" aria-label="Calendar">
+
+        <!-- Calendar Header -->
+        <div class="calendar-header">
+            <button id="prev-month" aria-label="Previous month">&lt;</button>
+            <h2 id="month-year"></h2>
+            <button id="next-month" aria-label="Next month">&gt;</button>
+        </div>
+
+        <!-- Weekdays -->
+        <div class="calendar-weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+
+        <!-- Calendar Dates -->
+        <div class="calendar-days" id="calendar-days"></div>
+
+        <!-- Events Section -->
+        <div class="events-section">
+
+            <h3 id="selected-date">Select a date</h3>
+
+            <ul id="event-list"></ul>
+
+            <form id="event-form">
+                <input
+                    type="text"
+                    id="event-input"
+                    placeholder="Enter an event..."
+                    maxlength="200"
+                    required
+                >
+
+                <button type="submit">Add Event</button>
+            </form>
+
+            <p id="calendar-status" aria-live="polite">
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<!-- END WORKING CALENDAR --></div>
+
+        </section>
+
+        <!-- ================= TODAY'S PROGRESS ================= -->
+        <section class="progress-section" text-align="center">
+        
+
+            <div class="stats">
+
+                <!-- Focus Time -->
+                <div class="stat-card">
+
+                    <div class="stat-icon">⏳</div>
+
+                    <div>
+                        <p>Total Focus Time</p>
+                        <h3 id="focus-time">00 min 00 sec</h3>
+                    </div>
+                </div>
+                <!-- Pomodoros -->
+                <div class="stat-card">
+
+                    <div class="stat-icon">🍅</div>
+
+                    <div>
+                        <p>Daily Pomodoros</p>
+                        <h3 id="daily-count">0</h3>
+                    </div>
+
+                </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer>
+
+            <p>
+                © 2026 My Smart Desk | AI Powered Productivity
+            </p>
+
+        </footer>
+
+    </div>
+        <!-- Connect JavaScript file -->
+    <script src="timer.js"></script>
+    <!-- connect audio file-->
+     <script src="audio.js"></script>
+     <!-- connect AI doubt solver file -->
+     <script type="module" src="ai_doubt_solver.js"></script>
+     <!-- connect posture correction file -->
+     <script type="module" src="posture.js"></script>
+     <!-- connect calendar file -->
+     <script src="calendar.js"></script>
+
+</body>
+</html>
