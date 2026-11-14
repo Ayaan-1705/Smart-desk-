@@ -132,9 +132,7 @@ signupForm.addEventListener("submit", async function(event) {
                     full_name: fullname
 
                 },
-
-                emailRedirectTo: window.location.origin + "/index.html"
-
+                emailRedirectTo: window.location.origin + "/dashboard.html"
             }
 
         });
@@ -150,9 +148,7 @@ signupForm.addEventListener("submit", async function(event) {
             message.style.color = "#a9d6b5";
 
             setTimeout(() => {
-
-                window.location.href = "index.html";
-
+                window.location.href = "dashboard.html";
             }, 1200);
 
         } else {
