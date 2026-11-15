@@ -156,28 +156,28 @@ body {
 
 /* Start button */
 
-.start-button {
+.logout-button {
     border: none;
 
     padding: 14px 22px;
 
     border-radius: 8px;
 
-    background-color: rgb(10, 206, 245);
+    background-color:#b11200;
 
-    color: #121212;
+    color: #faf9f9;
 
     font-weight: bold;
 
     cursor: pointer;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.475);
+    box-shadow: 0 4px 15px rgba(11, 11, 11, 0.801);
 }
 
-.start-button:hover {
-    background: #8c9ea7;
-    color: #121212;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.936);
+.logout-button:hover {
+    background: #de220e;
+    color: #fcf9f9;
+    box-shadow: 0 4px 15px rgba(192, 161, 161, 0.936);
 }
 
 
